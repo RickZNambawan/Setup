@@ -1,0 +1,11 @@
+* create a logo and a canvas that has a measurements of 1024 x 1024 resolution 300
+* go to https://appicon.co/ and generate the icon
+
+go to android\app\src\main\res then replace the ic_launcher.png of the new icon to every ic_launcher.png in the folder.
+
+* note: only the ic_launcher.png should be replace
+
+cd android
+
+./gradlew clean
+npm start -- --reset-cache

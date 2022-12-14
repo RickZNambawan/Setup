@@ -1,0 +1,50 @@
+1. prepare for a design in figma
+2. create react native project 
+- npx react-native init NameOfProject (Vanilla Javascript)
+- npx react-native init NameOfProject --template react-native-template-typescript (Typescript)
+- sudo npx react-native init NameOfProject --template react-native-template-typescript (Macbook Typescript)
+3. rename the project
+- npm install react-native-rename
+- npx react-native-rename AppName -b "com.org.appname"
+4. start the app to check everything is okay
+- connect device via usb cable and turn on developer options 
+- location the directory in cmd: C:\Users\rickz\AppData\Local\Android\Sdk\platform-tools
+- type in cmd adb kill-server
+- type in cmd adb -s deviceName reverse tcp:8081 tcp:8081
+- npm start -- --reset-cache
+- npx react-native run-android
+5. find your ip address then configure it to apply server on app
+6. push the repo to github.
+7. create src folder, create the following necessary folder:
+- assets
+- screens
+- components
+- navigations
+8. install all packages and dependency using 'libraries-react-native-cli.txt'
+9. create dot env variables by reading the 'react-native-environment-variables.txt'
+10. add .env file to .gitignore
+11. run the app to check everything is okay after installing library
+- npm start --reset-cache
+- npm run android
+12. push the repo then commit named 'initial project'
+13. install custom fonts
+- download fonts from google fonts
+- copy fonts then move to assets/fonts folder
+- create react-native.config.js
+- add the lines
+module.exports = {
+  project: {
+      ios: {},
+      android: {}
+  },
+  assets: ['./src/assets/fonts/']
+}
+- npx react-native-asset
+14. add custom fonts, colors and shadows to tailwind config.
+15. run the app to test if colors, fonts, and shadows element is working.
+16. create HeadingComponent file from h1 - h6 using styled tailwindcss.
+
+
+
+
+

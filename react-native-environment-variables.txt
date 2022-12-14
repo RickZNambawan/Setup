@@ -1,0 +1,23 @@
+1. npm install react-native-dotenv
+2. configure babel config. // add these line of code 
+"plugins": [
+    ["module:react-native-dotenv", {
+      "envName": "APP_ENV",
+      "moduleName": "@env",
+      "path": ".env",
+    }]
+  ]
+
+3. create '.env' file, then add the API KEY or any confidential variable you have
+4. create 'config' folder then add 'env.js' file
+5. import all the variables from .env then import from '@env'
+import {
+  // import the variables you have here
+} from '@env'
+
+6. create object then add all the variables on the object.
+7. export the object using ternary operator with constant variable of __DEV__ // optional since dont know about production
+8. import the env file onto the files you need. as import env from "../config/env";
+9. add .env file to .gitignore
+10. DONE!
+
